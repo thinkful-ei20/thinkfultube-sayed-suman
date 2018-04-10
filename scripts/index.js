@@ -1,4 +1,5 @@
-const API_KEY = 'YOUR_KEY_HERE';
+'use strict'
+const API_KEY = 'AIzaSyB67zJtiurAPJA3_l4k_dbafCQuTGautms';
 
 /*
   We want our store to hold a `videos` array of "decorated" objects - i.e. objects that
@@ -18,7 +19,7 @@ const store = {
 
 // TASK: Add the Youtube Search API Base URL here:
 // Documentation is here: https://developers.google.com/youtube/v3/docs/search/list#usage
-const BASE_URL = '';
+const BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
 
 // TASK:
 // 1. Create a `fetchVideos` function that receives a `searchTerm` and `callback`
@@ -26,7 +27,11 @@ const BASE_URL = '';
 // 3. Make a getJSON call using the query object and sending the provided callback in as the last argument
 // TEST IT! Execute this function and console log the results inside the callback.
 const fetchVideos = function(searchTerm, callback) {
-
+  const query = {
+    q: `${searchTerm} in:name`,
+    per_page: 5
+  }
+  console.log($.getJSON(BASE_URL, query, callback));
 };
 
 // TASK:
@@ -77,12 +82,14 @@ const render = function() {
 //   f) Inside the callback, add the decorated response into your store using the `addVideosToStore` function
 //   g) Inside the callback, run the `render` function 
 // TEST IT!
-const handleFormSubmit = function() {
-
+const handleFormSubmit = function(event) {
+  event.preventDefault();
+  fetchVideos;
 };
 
 // When DOM is ready:
 $(function () {
   // TASK:
   // 1. Run `handleFormSubmit` to bind the event listener to the DOM
+  $(handleFormSubmit);
 });
