@@ -28,9 +28,12 @@ const BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
 // TEST IT! Execute this function and console log the results inside the callback.
 const fetchVideos = function(searchTerm, callback) {
   const query = {
-    q: `${searchTerm} in:name`,    
+    part:'snippet',
+    key:'AIzaSyCdh_TJQJq0K9yKItkB9vVKNHULiO0zbg4',
+    q: `${searchTerm}`,    
   };  
-  console.log($.getJSON(BASE_URL, query,callback));
+  debugger;
+  $.getJSON(BASE_URL, query,callback);
 };
 
 // TASK:
@@ -50,6 +53,8 @@ const decorateResponse = function(response) {
 // 2. Using the object, return an HTML string containing all the expected data
 // TEST IT!
 const generateVideoItemHtml = function(video) {
+  debugger;
+  console.log(video);
 
 };
 
@@ -85,7 +90,7 @@ const handleFormSubmit = function() {
   $('#YouTubeSearchForm').submit(function(event){
     console.log('got here - search form event ');
     event.preventDefault();
-    fetchVideos($('#search-term'),generateVideoItemHtml);
+    fetchVideos($('#search-term').val(),generateVideoItemHtml);
     $('#search-term').val('');
   });  
 };
@@ -95,5 +100,5 @@ $(function () {
   // TASK:
   // 1. Run `handleFormSubmit` to bind the event listener to the DOM
   console.log('got here');
-  $(handleFormSubmit);
+  handleFormSubmit();
 });
