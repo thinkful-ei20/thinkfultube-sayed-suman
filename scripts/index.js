@@ -31,8 +31,7 @@ const fetchVideos = function(searchTerm, callback) {
     part:'snippet',
     key:'AIzaSyCdh_TJQJq0K9yKItkB9vVKNHULiO0zbg4',
     q: `${searchTerm}`,    
-  };  
-  debugger;
+  };    
   $.getJSON(BASE_URL, query,callback);
 };
 
@@ -45,16 +44,15 @@ const fetchVideos = function(searchTerm, callback) {
 // TEST IT! Grab an example API response and send it into the function - make sure
 // you get back the object you want.
 const decorateResponse = function(response) {
-
+  
 };
-
+//console.log(decorateResponse(mockData));
 // TASK:
 // 1. Create a `generateVideoItemHtml` function that receives the decorated object
 // 2. Using the object, return an HTML string containing all the expected data
 // TEST IT!
-const generateVideoItemHtml = function(video) {
-  debugger;
-  console.log(video);
+const generateVideoItemHtml = function(video) { 
+ console.log(video);
 
 };
 
@@ -102,3 +100,181 @@ $(function () {
   console.log('got here');
   handleFormSubmit();
 });
+// const mockData = {
+//     {
+//     "kind": "youtube#searchListResponse",
+//     "etag": "\"RmznBCICv9YtgWaaa_nWDIH1_GM/fG5fs-DOcL94N3BfmZFXQdbeiCI\"",
+//     "nextPageToken": "CAUQAA",
+//     "regionCode": "US",
+//     "pageInfo": {
+//      "totalResults": 1000000,
+//      "resultsPerPage": 5
+//     },
+//     "items": [
+//      {
+//       "kind": "youtube#searchResult",
+//       "etag": "\"RmznBCICv9YtgWaaa_nWDIH1_GM/kbuAuHHVy6cVsT18GPT6rS2I_zc\"",
+//       "id": {
+//        "kind": "youtube#video",
+//        "videoId": "YYgc4r9U75M"
+//       },
+//       "snippet": {
+//        "publishedAt": "2012-12-24T14:19:19.000Z",
+//        "channelId": "UCcu2IWjpwnlV6F52hWI5CUw",
+//        "title": "\"Suman Malagkit\"",
+//        "description": "rice cake made from glutinous or sticky rice(malagkit) and wrapped in banana leaves....",
+//        "thumbnails": {
+//         "default": {
+//          "url": "https://i.ytimg.com/vi/YYgc4r9U75M/default.jpg",
+//          "width": 120,
+//          "height": 90
+//         },
+//         "medium": {
+//          "url": "https://i.ytimg.com/vi/YYgc4r9U75M/mqdefault.jpg",
+//          "width": 320,
+//          "height": 180
+//         },
+//         "high": {
+//          "url": "https://i.ytimg.com/vi/YYgc4r9U75M/hqdefault.jpg",
+//          "width": 480,
+//          "height": 360
+//         }
+//        },
+//        "channelTitle": "Nette Cooking",
+//        "liveBroadcastContent": "none"
+//       }
+//      },
+//      {
+//       "kind": "youtube#searchResult",
+//       "etag": "\"RmznBCICv9YtgWaaa_nWDIH1_GM/cReNcEioPC5DCIhDgmQwN4Re0qA\"",
+//       "id": {
+//        "kind": "youtube#video",
+//        "videoId": "YXgLodBKiOI"
+//       },
+//       "snippet": {
+//        "publishedAt": "2013-10-29T03:17:22.000Z",
+//        "channelId": "UCFImY20zsnSkVWqNZMm0XDw",
+//        "title": "Suman Malagkit Filipino Kakanin - rice cake",
+//        "description": "Suman Malagkit is made of sticky rice, Coconut milk add white sugar according to your taste wrapped tightly banana leaf, then boiled, Suman is a delicious Filipino Kakanin.",
+//        "thumbnails": {
+//         "default": {
+//          "url": "https://i.ytimg.com/vi/YXgLodBKiOI/default.jpg",
+//          "width": 120,
+//          "height": 90
+//         },
+//         "medium": {
+//          "url": "https://i.ytimg.com/vi/YXgLodBKiOI/mqdefault.jpg",
+//          "width": 320,
+//          "height": 180
+//         },
+//         "high": {
+//          "url": "https://i.ytimg.com/vi/YXgLodBKiOI/hqdefault.jpg",
+//          "width": 480,
+//          "height": 360
+//         }
+//        },
+//        "channelTitle": "Loren sweety",
+//        "liveBroadcastContent": "none"
+//       }
+//      },
+//      {
+//       "kind": "youtube#searchResult",
+//       "etag": "\"RmznBCICv9YtgWaaa_nWDIH1_GM/xUykzDA61SpUlE47EZklwq0SiZg\"",
+//       "id": {
+//        "kind": "youtube#video",
+//        "videoId": "iDQ_IbnwMGI"
+//       },
+//       "snippet": {
+//        "publishedAt": "2016-02-23T04:39:44.000Z",
+//        "channelId": "UCq8Qqa1rEbuIAKIp0zZJtzQ",
+//        "title": "How to Make Homemade Suman | Yummy Ph",
+//        "description": "You can make the classic Filipino rice cake using your rice cooker! Jazz it up by stuffing it with chocolate. This recipe makes about 6-7 pieces. Tip: Don't forget to pass the banana leaves...",
+//        "thumbnails": {
+//         "default": {
+//          "url": "https://i.ytimg.com/vi/iDQ_IbnwMGI/default.jpg",
+//          "width": 120,
+//          "height": 90
+//         },
+//         "medium": {
+//          "url": "https://i.ytimg.com/vi/iDQ_IbnwMGI/mqdefault.jpg",
+//          "width": 320,
+//          "height": 180
+//         },
+//         "high": {
+//          "url": "https://i.ytimg.com/vi/iDQ_IbnwMGI/hqdefault.jpg",
+//          "width": 480,
+//          "height": 360
+//         }
+//        },
+//        "channelTitle": "YUMMY Ph",
+//        "liveBroadcastContent": "none"
+//       }
+//      },
+//      {
+//       "kind": "youtube#searchResult",
+//       "etag": "\"RmznBCICv9YtgWaaa_nWDIH1_GM/2AF30GMtlgVjSFiJxnUfv73p55g\"",
+//       "id": {
+//        "kind": "youtube#video",
+//        "videoId": "A70tjz96F3o"
+//       },
+//       "snippet": {
+//        "publishedAt": "2015-08-07T14:10:25.000Z",
+//        "channelId": "UCp9EDptTSpPFkSyqiKsLY2w",
+//        "title": "How to make iBos or Suman (Glutinous Rice in Banana Leaves)",
+//        "description": "TIP: Soak the rice for about 3-4 hours but not longer before cooking. It will lessen the cooking time. Glutinous Rice in Banana Leaves (iBos/Suman), a traditional Filipino delicacy. A friend...",
+//        "thumbnails": {
+//         "default": {
+//          "url": "https://i.ytimg.com/vi/A70tjz96F3o/default.jpg",
+//          "width": 120,
+//          "height": 90
+//         },
+//         "medium": {
+//          "url": "https://i.ytimg.com/vi/A70tjz96F3o/mqdefault.jpg",
+//          "width": 320,
+//          "height": 180
+//         },
+//         "high": {
+//          "url": "https://i.ytimg.com/vi/A70tjz96F3o/hqdefault.jpg",
+//          "width": 480,
+//          "height": 360
+//         }
+//        },
+//        "channelTitle": "Cooking, Gardening and Traveling with Luchelle",
+//        "liveBroadcastContent": "none"
+//       }
+//      },
+//      {
+//       "kind": "youtube#searchResult",
+//       "etag": "\"RmznBCICv9YtgWaaa_nWDIH1_GM/jF44MC54dlDXs3SrQ4YxnPn7htw\"",
+//       "id": {
+//        "kind": "youtube#video",
+//        "videoId": "jcmGZDjuibM"
+//       },
+//       "snippet": {
+//        "publishedAt": "2017-04-28T07:12:50.000Z",
+//        "channelId": "UCRh-4WUJx8M86gUYL2pyKSQ",
+//        "title": "Top 50 Songs Of Kabir Suman | টপ ৫০ কবীর সুমনের গান | One Stop Jukebox",
+//        "description": "This jukebox presents Top 50 Bengali Hits of KABIR SUMAN, one of the very popular artiste among all contemporary singers of Bengal, for your listening pleasure. These songs are very popular...",
+//        "thumbnails": {
+//         "default": {
+//          "url": "https://i.ytimg.com/vi/jcmGZDjuibM/default.jpg",
+//          "width": 120,
+//          "height": 90
+//         },
+//         "medium": {
+//          "url": "https://i.ytimg.com/vi/jcmGZDjuibM/mqdefault.jpg",
+//          "width": 320,
+//          "height": 180
+//         },
+//         "high": {
+//          "url": "https://i.ytimg.com/vi/jcmGZDjuibM/hqdefault.jpg",
+//          "width": 480,
+//          "height": 360
+//         }
+//        },
+//        "channelTitle": "Saregama Bengali",
+//        "liveBroadcastContent": "none"
+//       }
+//      }
+//     ]    
+// };
