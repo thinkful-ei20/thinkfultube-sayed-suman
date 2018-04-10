@@ -1,6 +1,184 @@
 'use strict';
 const API_KEY = 'AIzaSyB67zJtiurAPJA3_l4k_dbafCQuTGautms';
 
+const placeHolder = {
+  'kind': 'youtube#searchListResponse',
+  'etag': '"RmznBCICv9YtgWaaa_nWDIH1_GM/FIg-Ux-6mBojVoG6KEvNbLg53og"',
+  'nextPageToken': 'CAUQAA',
+  'regionCode': 'US',
+  'pageInfo': {
+    'totalResults': 1000000,
+    'resultsPerPage': 5
+  },
+  'items': [
+    {
+      'kind': 'youtube#searchResult',
+      'etag': '"RmznBCICv9YtgWaaa_nWDIH1_GM/D3mMdZJZYLaodYDNUJsnnzUF37E"',
+      'id': {
+        'kind': 'youtube#video',
+        'videoId': 'gjNukU-3jPk'
+      },
+      'snippet': {
+        'publishedAt': '2018-01-13T23:01:58.000Z',
+        'channelId': 'UCGBtk3J7PL40ZMhf3_1YBwg',
+        'title': 'Evolution of Batman in Cartoons in 45 Minutes (2018)',
+        'description': 'A look at how animated Batman has changed since 1968. Thanks for watching! Make sure to write your suggestions in the comments below. List of cartoons and voice actors: 1. Batman with Robin...',
+        'thumbnails': {
+          'default': {
+            'url': 'https://i.ytimg.com/vi/gjNukU-3jPk/default.jpg',
+            'width': 120,
+            'height': 90
+          },
+          'medium': {
+            'url': 'https://i.ytimg.com/vi/gjNukU-3jPk/mqdefault.jpg',
+            'width': 320,
+            'height': 180
+          },
+          'high': {
+            'url': 'https://i.ytimg.com/vi/gjNukU-3jPk/hqdefault.jpg',
+            'width': 480,
+            'height': 360
+          }
+        },
+        'channelTitle': 'Then & Now',
+        'liveBroadcastContent': 'none'
+      }
+    },
+    {
+      'kind': 'youtube#searchResult',
+      'etag': '"RmznBCICv9YtgWaaa_nWDIH1_GM/0-_uxwzuBIyue61TLvQNiDoixTA"',
+      'id': {
+        'kind': 'youtube#video',
+        'videoId': '4eQJpBwam1o'
+      },
+      'snippet': {
+        'publishedAt': '2018-03-27T21:23:08.000Z',
+        'channelId': 'UCl2Ae8IzmEusR43OL9HNcKQ',
+        'title': 'Batman: The Enemy Within - Episode 5 - Same Stitch (Villain Joker - Full Episode)',
+        'description': 'Batman: The Telltale Series Season 2 \\ Batman: The Enemy Within - Fifth and Final Episode - Full walkthrough with Joker as villain Episode 5 "Vigilante Joker" version: https://youtu.be/5TOPa8nYdNw...',
+        'thumbnails': {
+          'default': {
+            'url': 'https://i.ytimg.com/vi/4eQJpBwam1o/default.jpg',
+            'width': 120,
+            'height': 90
+          },
+          'medium': {
+            'url': 'https://i.ytimg.com/vi/4eQJpBwam1o/mqdefault.jpg',
+            'width': 320,
+            'height': 180
+          },
+          'high': {
+            'url': 'https://i.ytimg.com/vi/4eQJpBwam1o/hqdefault.jpg',
+            'width': 480,
+            'height': 360
+          }
+        },
+        'channelTitle': 'Batman Arkham Videos',
+        'liveBroadcastContent': 'none'
+      }
+    },
+    {
+      'kind': 'youtube#searchResult',
+      'etag': '"RmznBCICv9YtgWaaa_nWDIH1_GM/TsYf-CAQjEfbha38SwpzkM12gQ0"',
+      'id': {
+        'kind': 'youtube#video',
+        'videoId': 'q86Lx4uWI54'
+      },
+      'snippet': {
+        'publishedAt': '2018-03-07T16:00:04.000Z',
+        'channelId': 'UCyu8StPfZWapR6rfW_JgqcA',
+        'title': 'Justice League Action | Batman VS Batman! | DC Kids',
+        'description': 'Batman has been split into two: one passive and good, the other aggressive and mean! But the real question is, how will Green Arrow look in red? DCKids is home to all your favorite DC characters,...',
+        'thumbnails': {
+          'default': {
+            'url': 'https://i.ytimg.com/vi/q86Lx4uWI54/default.jpg',
+            'width': 120,
+            'height': 90
+          },
+          'medium': {
+            'url': 'https://i.ytimg.com/vi/q86Lx4uWI54/mqdefault.jpg',
+            'width': 320,
+            'height': 180
+          },
+          'high': {
+            'url': 'https://i.ytimg.com/vi/q86Lx4uWI54/hqdefault.jpg',
+            'width': 480,
+            'height': 360
+          }
+        },
+        'channelTitle': 'DC Kids',
+        'liveBroadcastContent': 'none'
+      }
+    },
+    {
+      'kind': 'youtube#searchResult',
+      'etag': '"RmznBCICv9YtgWaaa_nWDIH1_GM/zbgWjTr9rWilsjpSGCbioqY6iE4"',
+      'id': {
+        'kind': 'youtube#video',
+        'videoId': 'JUWgGzqxgQo'
+      },
+      'snippet': {
+        'publishedAt': '2017-09-23T15:00:01.000Z',
+        'channelId': 'UCyu8StPfZWapR6rfW_JgqcA',
+        'title': 'An Animated History of Batman | Batman Day | DC Kids',
+        'description': 'From Batman: The Animated Series to Justice League Action, check out the very best of Batman\'s animated history. DCKids is home to all your favorite DC characters, videos, comics, games...',
+        'thumbnails': {
+          'default': {
+            'url': 'https://i.ytimg.com/vi/JUWgGzqxgQo/default.jpg',
+            'width': 120,
+            'height': 90
+          },
+          'medium': {
+            'url': 'https://i.ytimg.com/vi/JUWgGzqxgQo/mqdefault.jpg',
+            'width': 320,
+            'height': 180
+          },
+          'high': {
+            'url': 'https://i.ytimg.com/vi/JUWgGzqxgQo/hqdefault.jpg',
+            'width': 480,
+            'height': 360
+          }
+        },
+        'channelTitle': 'DC Kids',
+        'liveBroadcastContent': 'none'
+      }
+    },
+    {
+      'kind': 'youtube#searchResult',
+      'etag': '"RmznBCICv9YtgWaaa_nWDIH1_GM/YpzG7OrUaR4ecAUfEduWHHC1EiA"',
+      'id': {
+        'kind': 'youtube#video',
+        'videoId': 'NwNdnAw61AA'
+      },
+      'snippet': {
+        'publishedAt': '2017-11-20T08:00:02.000Z',
+        'channelId': 'UCiZVMOinTQGb8HQu53VbV4Q',
+        'title': 'BATMAN: The Enemy Within Episode 3 All Cutscenes (Season 2) Fractured Mask | Game Movie 1080p 60FPS',
+        'description': 'FAR CRY 5 MOVIE (ALL CUTSCENES) - https://www.youtube.com/watch?v=-y4y8rHxjXE Everything Wrong With Episode 3: https://www.youtube.com/watch?v=0ztZqpj0z2U ▻ GLP Shirts and Merch: https://tinyur...',
+        'thumbnails': {
+          'default': {
+            'url': 'https://i.ytimg.com/vi/NwNdnAw61AA/default.jpg',
+            'width': 120,
+            'height': 90
+          },
+          'medium': {
+            'url': 'https://i.ytimg.com/vi/NwNdnAw61AA/mqdefault.jpg',
+            'width': 320,
+            'height': 180
+          },
+          'high': {
+            'url': 'https://i.ytimg.com/vi/NwNdnAw61AA/hqdefault.jpg',
+            'width': 480,
+            'height': 360
+          }
+        },
+        'channelTitle': 'Gamer\'s Little Playground',
+        'liveBroadcastContent': 'none'
+      }
+    }
+  ]
+};
+ 
 /*
   We want our store to hold a `videos` array of "decorated" objects - i.e. objects that
   have been transformed into just the necessary data to display on our page, compared to the large
@@ -11,7 +189,6 @@ const API_KEY = 'AIzaSyB67zJtiurAPJA3_l4k_dbafCQuTGautms';
     title: 'Cats dancing the Macarena',
     thumbnail: 'https://img.youtube.com/some/thumbnail.jpg'
   }
-
 */
 const store = {
   videos: []
@@ -31,10 +208,9 @@ const fetchVideos = function(searchTerm, callback) {
     part:'snippet',
     key:'AIzaSyCdh_TJQJq0K9yKItkB9vVKNHULiO0zbg4',
     q: `${searchTerm}`,    
-  };    
-  $.getJSON(BASE_URL, query,callback);
+  };  
+  $.getJSON(BASE_URL, query, callback);
 };
-
 // TASK:
 // 1. Create a `decorateResponse` function that receives the Youtube API response
 // 2. Map through the response object's `items` array
@@ -44,24 +220,33 @@ const fetchVideos = function(searchTerm, callback) {
 // TEST IT! Grab an example API response and send it into the function - make sure
 // you get back the object you want.
 const decorateResponse = function(response) {
-  
+  return response.items.map(item => {
+    const id = item.id.videoId;
+    const title = item.snippet.title;
+    const thumbnail = item.snippet.thumbnails.default.url;
+
+    return {id, title, thumbnail};
+  });
 };
-//console.log(decorateResponse(mockData));
+const testVar = decorateResponse(placeHolder);
 // TASK:
 // 1. Create a `generateVideoItemHtml` function that receives the decorated object
 // 2. Using the object, return an HTML string containing all the expected data
 // TEST IT!
-const generateVideoItemHtml = function(video) { 
- console.log(video);
-
-};
-
+const generateVideoItemHtml = function(video) {
+  return `
+    <li value='${video.id}'>
+    <img src='${video.thumbnail}'>
+    <h2>${video.title}</h2>
+    </li>          
+    `;          
+};   
 // TASK:
 // 1. Create a `addVideosToStore` function that receives an array of decorated video 
 // objects and sets the array as the value held in store.items
 // TEST IT!
 const addVideosToStore = function(videos) {
-
+  store.videos.push(videos);
 };
 
 // TASK:
@@ -88,6 +273,8 @@ const handleFormSubmit = function() {
   $('#YouTubeSearchForm').submit(function(event){
     console.log('got here - search form event ');
     event.preventDefault();
+    const queryTarget = $(event.currentTarget).find('#search-term');
+    const query = queryTarget.val();
     fetchVideos($('#search-term').val(),generateVideoItemHtml);
     $('#search-term').val('');
   });  
@@ -100,181 +287,3 @@ $(function () {
   console.log('got here');
   handleFormSubmit();
 });
-// const mockData = {
-//     {
-//     "kind": "youtube#searchListResponse",
-//     "etag": "\"RmznBCICv9YtgWaaa_nWDIH1_GM/fG5fs-DOcL94N3BfmZFXQdbeiCI\"",
-//     "nextPageToken": "CAUQAA",
-//     "regionCode": "US",
-//     "pageInfo": {
-//      "totalResults": 1000000,
-//      "resultsPerPage": 5
-//     },
-//     "items": [
-//      {
-//       "kind": "youtube#searchResult",
-//       "etag": "\"RmznBCICv9YtgWaaa_nWDIH1_GM/kbuAuHHVy6cVsT18GPT6rS2I_zc\"",
-//       "id": {
-//        "kind": "youtube#video",
-//        "videoId": "YYgc4r9U75M"
-//       },
-//       "snippet": {
-//        "publishedAt": "2012-12-24T14:19:19.000Z",
-//        "channelId": "UCcu2IWjpwnlV6F52hWI5CUw",
-//        "title": "\"Suman Malagkit\"",
-//        "description": "rice cake made from glutinous or sticky rice(malagkit) and wrapped in banana leaves....",
-//        "thumbnails": {
-//         "default": {
-//          "url": "https://i.ytimg.com/vi/YYgc4r9U75M/default.jpg",
-//          "width": 120,
-//          "height": 90
-//         },
-//         "medium": {
-//          "url": "https://i.ytimg.com/vi/YYgc4r9U75M/mqdefault.jpg",
-//          "width": 320,
-//          "height": 180
-//         },
-//         "high": {
-//          "url": "https://i.ytimg.com/vi/YYgc4r9U75M/hqdefault.jpg",
-//          "width": 480,
-//          "height": 360
-//         }
-//        },
-//        "channelTitle": "Nette Cooking",
-//        "liveBroadcastContent": "none"
-//       }
-//      },
-//      {
-//       "kind": "youtube#searchResult",
-//       "etag": "\"RmznBCICv9YtgWaaa_nWDIH1_GM/cReNcEioPC5DCIhDgmQwN4Re0qA\"",
-//       "id": {
-//        "kind": "youtube#video",
-//        "videoId": "YXgLodBKiOI"
-//       },
-//       "snippet": {
-//        "publishedAt": "2013-10-29T03:17:22.000Z",
-//        "channelId": "UCFImY20zsnSkVWqNZMm0XDw",
-//        "title": "Suman Malagkit Filipino Kakanin - rice cake",
-//        "description": "Suman Malagkit is made of sticky rice, Coconut milk add white sugar according to your taste wrapped tightly banana leaf, then boiled, Suman is a delicious Filipino Kakanin.",
-//        "thumbnails": {
-//         "default": {
-//          "url": "https://i.ytimg.com/vi/YXgLodBKiOI/default.jpg",
-//          "width": 120,
-//          "height": 90
-//         },
-//         "medium": {
-//          "url": "https://i.ytimg.com/vi/YXgLodBKiOI/mqdefault.jpg",
-//          "width": 320,
-//          "height": 180
-//         },
-//         "high": {
-//          "url": "https://i.ytimg.com/vi/YXgLodBKiOI/hqdefault.jpg",
-//          "width": 480,
-//          "height": 360
-//         }
-//        },
-//        "channelTitle": "Loren sweety",
-//        "liveBroadcastContent": "none"
-//       }
-//      },
-//      {
-//       "kind": "youtube#searchResult",
-//       "etag": "\"RmznBCICv9YtgWaaa_nWDIH1_GM/xUykzDA61SpUlE47EZklwq0SiZg\"",
-//       "id": {
-//        "kind": "youtube#video",
-//        "videoId": "iDQ_IbnwMGI"
-//       },
-//       "snippet": {
-//        "publishedAt": "2016-02-23T04:39:44.000Z",
-//        "channelId": "UCq8Qqa1rEbuIAKIp0zZJtzQ",
-//        "title": "How to Make Homemade Suman | Yummy Ph",
-//        "description": "You can make the classic Filipino rice cake using your rice cooker! Jazz it up by stuffing it with chocolate. This recipe makes about 6-7 pieces. Tip: Don't forget to pass the banana leaves...",
-//        "thumbnails": {
-//         "default": {
-//          "url": "https://i.ytimg.com/vi/iDQ_IbnwMGI/default.jpg",
-//          "width": 120,
-//          "height": 90
-//         },
-//         "medium": {
-//          "url": "https://i.ytimg.com/vi/iDQ_IbnwMGI/mqdefault.jpg",
-//          "width": 320,
-//          "height": 180
-//         },
-//         "high": {
-//          "url": "https://i.ytimg.com/vi/iDQ_IbnwMGI/hqdefault.jpg",
-//          "width": 480,
-//          "height": 360
-//         }
-//        },
-//        "channelTitle": "YUMMY Ph",
-//        "liveBroadcastContent": "none"
-//       }
-//      },
-//      {
-//       "kind": "youtube#searchResult",
-//       "etag": "\"RmznBCICv9YtgWaaa_nWDIH1_GM/2AF30GMtlgVjSFiJxnUfv73p55g\"",
-//       "id": {
-//        "kind": "youtube#video",
-//        "videoId": "A70tjz96F3o"
-//       },
-//       "snippet": {
-//        "publishedAt": "2015-08-07T14:10:25.000Z",
-//        "channelId": "UCp9EDptTSpPFkSyqiKsLY2w",
-//        "title": "How to make iBos or Suman (Glutinous Rice in Banana Leaves)",
-//        "description": "TIP: Soak the rice for about 3-4 hours but not longer before cooking. It will lessen the cooking time. Glutinous Rice in Banana Leaves (iBos/Suman), a traditional Filipino delicacy. A friend...",
-//        "thumbnails": {
-//         "default": {
-//          "url": "https://i.ytimg.com/vi/A70tjz96F3o/default.jpg",
-//          "width": 120,
-//          "height": 90
-//         },
-//         "medium": {
-//          "url": "https://i.ytimg.com/vi/A70tjz96F3o/mqdefault.jpg",
-//          "width": 320,
-//          "height": 180
-//         },
-//         "high": {
-//          "url": "https://i.ytimg.com/vi/A70tjz96F3o/hqdefault.jpg",
-//          "width": 480,
-//          "height": 360
-//         }
-//        },
-//        "channelTitle": "Cooking, Gardening and Traveling with Luchelle",
-//        "liveBroadcastContent": "none"
-//       }
-//      },
-//      {
-//       "kind": "youtube#searchResult",
-//       "etag": "\"RmznBCICv9YtgWaaa_nWDIH1_GM/jF44MC54dlDXs3SrQ4YxnPn7htw\"",
-//       "id": {
-//        "kind": "youtube#video",
-//        "videoId": "jcmGZDjuibM"
-//       },
-//       "snippet": {
-//        "publishedAt": "2017-04-28T07:12:50.000Z",
-//        "channelId": "UCRh-4WUJx8M86gUYL2pyKSQ",
-//        "title": "Top 50 Songs Of Kabir Suman | টপ ৫০ কবীর সুমনের গান | One Stop Jukebox",
-//        "description": "This jukebox presents Top 50 Bengali Hits of KABIR SUMAN, one of the very popular artiste among all contemporary singers of Bengal, for your listening pleasure. These songs are very popular...",
-//        "thumbnails": {
-//         "default": {
-//          "url": "https://i.ytimg.com/vi/jcmGZDjuibM/default.jpg",
-//          "width": 120,
-//          "height": 90
-//         },
-//         "medium": {
-//          "url": "https://i.ytimg.com/vi/jcmGZDjuibM/mqdefault.jpg",
-//          "width": 320,
-//          "height": 180
-//         },
-//         "high": {
-//          "url": "https://i.ytimg.com/vi/jcmGZDjuibM/hqdefault.jpg",
-//          "width": 480,
-//          "height": 360
-//         }
-//        },
-//        "channelTitle": "Saregama Bengali",
-//        "liveBroadcastContent": "none"
-//       }
-//      }
-//     ]    
-// };
