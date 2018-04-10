@@ -228,7 +228,6 @@ const decorateResponse = function(response) {
     return {id, title, thumbnail};
   });
 };
-const testVar = decorateResponse(placeHolder);
 // TASK:
 // 1. Create a `generateVideoItemHtml` function that receives the decorated object
 // 2. Using the object, return an HTML string containing all the expected data
@@ -273,8 +272,7 @@ const render = function() {
 //   g) Inside the callback, run the `render` function 
 // TEST IT!
 const handleFormSubmit = function() {
-  $('#YouTubeSearchForm').submit(function(event){
-    console.log('got here - search form event ');
+  $('#YouTubeSearchForm').submit(function(event){    
     event.preventDefault();
     const queryTarget = $(event.currentTarget).find('#search-term');
     const query = queryTarget.val();
@@ -290,7 +288,6 @@ const handleFormSubmit = function() {
 // When DOM is ready:
 $(function () {
   // TASK:
-  // 1. Run `handleFormSubmit` to bind the event listener to the DOM
-  console.log('got here');
+  // 1. Run `handleFormSubmit` to bind the event listener to the DOM  
   handleFormSubmit();
 });
