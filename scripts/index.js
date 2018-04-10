@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 const API_KEY = 'AIzaSyB67zJtiurAPJA3_l4k_dbafCQuTGautms';
 
 /*
@@ -28,10 +28,9 @@ const BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
 // TEST IT! Execute this function and console log the results inside the callback.
 const fetchVideos = function(searchTerm, callback) {
   const query = {
-    q: `${searchTerm} in:name`,
-    per_page: 5
-  }
-  console.log($.getJSON(BASE_URL, query, callback));
+    q: `${searchTerm} in:name`,    
+  };  
+  console.log($.getJSON(BASE_URL, query,callback));
 };
 
 // TASK:
@@ -82,14 +81,19 @@ const render = function() {
 //   f) Inside the callback, add the decorated response into your store using the `addVideosToStore` function
 //   g) Inside the callback, run the `render` function 
 // TEST IT!
-const handleFormSubmit = function(event) {
-  event.preventDefault();
-  fetchVideos;
+const handleFormSubmit = function() {
+  $('#YouTubeSearchForm').submit(function(event){
+    console.log('got here - search form event ');
+    event.preventDefault();
+    fetchVideos($('#search-term'),generateVideoItemHtml);
+    $('#search-term').val('');
+  });  
 };
 
 // When DOM is ready:
 $(function () {
   // TASK:
   // 1. Run `handleFormSubmit` to bind the event listener to the DOM
+  console.log('got here');
   $(handleFormSubmit);
 });
