@@ -235,18 +235,18 @@ const testVar = decorateResponse(placeHolder);
 // TEST IT!
 const generateVideoItemHtml = function(video) {
   return `
-    <li value='${video.id}'>
-    <img src='${video.thumbnail}'>
-    <h2>${video.title}</h2>
+    <li id='${video.id}'>
+      <h2>${video.title}</h2>
+      <img src='${video.thumbnail}'>
     </li>          
-    `;          
+    `;
 };   
 // TASK:
 // 1. Create a `addVideosToStore` function that receives an array of decorated video 
 // objects and sets the array as the value held in store.items
 // TEST IT!
 const addVideosToStore = function(videos) {
-  store.videos.push(videos);
+  store.videos = videos;
 };
 
 // TASK:
@@ -255,7 +255,10 @@ const addVideosToStore = function(videos) {
 // 3. Add your array of DOM elements to the appropriate DOM element
 // TEST IT!
 const render = function() {
-
+  let videosHtml = store.videos.map(video => {
+    return generateVideoItemHtml(video);
+  });
+  $('.results').html(videosHtml);
 };
 
 // TASK:
@@ -275,8 +278,12 @@ const handleFormSubmit = function() {
     event.preventDefault();
     const queryTarget = $(event.currentTarget).find('#search-term');
     const query = queryTarget.val();
-    fetchVideos($('#search-term').val(),generateVideoItemHtml);
     $('#search-term').val('');
+    fetchVideos(query, (response) => {
+      let decRes = decorateResponse(response);
+      addVideosToStore(decRes);
+      render();
+    });
   });  
 };
 
